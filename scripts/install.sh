@@ -20,9 +20,9 @@ clone_repo() {
     echo "Cloned ${repo} -> ${target}"
 }
 
-clone_repo "https://github.com/tmux-plugins/tpm.git" "${DOTFILES_DIR}/.config/tmux/plugins/tpm"
-
 mkdir -p "${HOME}/.config"
+clone_repo "https://github.com/tmux-plugins/tpm.git" "${DOTFILES_DIR}/.config/tmux/plugins/tpm"
+clone_repo "https://github.com/joeyshi12/nvim.git" "${HOME}/.config/nvim"
 
 pushd "${DOTFILES_DIR}"
 for file in .config/*; do
