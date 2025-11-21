@@ -17,7 +17,7 @@ Configuration files for a comfy development environment.
     ```
 3. Clone the repository.
     ```sh
-    git clone git@github.com:joeyshi12/dev-dotfiles ~/.dotfiles
+    git clone https://github.com/joeyshi12/dev-dotfiles.git ~/.dotfiles
     ```
 4. Create symlinks.
     ```sh
@@ -28,7 +28,7 @@ Configuration files for a comfy development environment.
 
 1. Clone the repository.
     ```sh
-    git clone git@github.com:joeyshi12/dev-dotfiles ~/.dotfiles
+    git clone https://github.com/joeyshi12/dev-dotfiles.git ~/.dotfiles
     ```
 2. Install dependencies from the package lists.
     ```sh
