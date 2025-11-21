@@ -2,7 +2,7 @@
 
 Configuration files for a comfy development environment.
 
-## Installation
+## Getting started
 
 ### MacOS
 
