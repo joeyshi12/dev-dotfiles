@@ -16,7 +16,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.maplocalleader = " "
 
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<C-n>", vim.cmd.tabn)

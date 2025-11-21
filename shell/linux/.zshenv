@@ -7,7 +7,7 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export VISUAL="nvim"
 export EDITOR="${VISUAL}"
 
-export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
+export LC_ALL="en_US.UTF-8"
 export IPYTHONDIR="${XDG_CONFIG_HOME}/ipython"
 export JUPYTER_CONFIG_DIR="${XDG_CONFIG_HOME}/jupyter"
 export LESSHISTFILE="${XDG_STATE_HOME}/lesshst"
@@ -16,14 +16,9 @@ export MARIADB_HISTFILE="${XDG_STATE_HOME}/mariadb_history"
 export SQLITE_HISTORY="${XDG_STATE_HOME}/sqlite_history"
 export DOTNET_ROOT="${XDG_DATA_HOME}/dotnet"
 export TLDR_CACHE_DIR="${XDG_CACHE_HOME}"
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-. "$HOME/.cargo/env"
-
 export NVM_DIR="${XDG_DATA_HOME}/nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-PATH="${HOME}/.local/bin:${PATH}"
-PATH="/opt/homebrew/opt/binutils/bin:${PATH}"
-PATH="/opt/homebrew/opt/mysql-client/bin:${PATH}"
+[[ -f "/usr/share/nvm/nvm.sh" ]] && \
+    source "/usr/share/nvm/nvm.sh"  # This loads nvm
+[[ -f "/usr/share/nvm/etc/bash_completion.d/nvm" ]] && \
+    source "/usr/share/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

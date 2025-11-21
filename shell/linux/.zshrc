@@ -3,7 +3,7 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -25,12 +25,26 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
-[[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && \
-    source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -f "${HOME}/.dotfiles/shell/aliases.zsh" ]] && \
+    source "${HOME}/.dotfiles/shell/aliases.zsh"
 
-[[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
-    source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Pacman
+alias pacs="sudo pacman --color=auto -S"
+alias pacss="pacman --color=auto -Ss"
+alias pacqs="pacman --color=auto -Qs"
+alias pacqo="pacman --color=auto -Qo"
+alias pacqe="pacman --color=auto -Qe"
+alias pacsyu="sudo pacman --color=auto -Syu"
+alias pacrsn="sudo pacman --color=auto -Rsn"
+alias pacsc="sudo pacman --color=auto -Sc"
 
-[[ -f "${ZDOTDIR}/aliases.zsh" ]] && source "${ZDOTDIR}/aliases.zsh"
-[[ -f "${ZDOTDIR}/fzf.zsh" ]] && source "${ZDOTDIR}/fzf.zsh"
-[[ -f "${ZDOTDIR}/p10k.zsh" ]] && source "${ZDOTDIR}/p10k.zsh"
+# Runs lf and changes user to current lf directory on quit
+lf() {
+    [ ! -d "${XDG_CACHE_HOME}/lf" ] && mkdir -p "${XDG_CACHE_HOME}/lf"
+    local target="${XDG_CACHE_HOME}/lf/lfdir"
+    /usr/bin/lf -last-dir-path $target
+    cd "$(cat $target)"
+}
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

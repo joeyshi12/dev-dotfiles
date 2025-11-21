@@ -1,0 +1,13 @@
+bat
+binutils
+docker
+docker-compose
+fastfetch
+git
+less
+lf
+man-db
+neovim
+nvm
+tmux
+zsh
