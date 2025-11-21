@@ -32,7 +32,7 @@ done
 popd
 
 kernel=$(uname | tr "[:upper:]" "[:lower:]")
-ln -sfn "${HOME}/.dotfiles/shell/${kernel}/.zshenv" ${HOME}
-ln -sfn "${HOME}/.dotfiles/shell/${kernel}/.zshrc" ${HOME}
+ln -sfn "${DOTFILES_DIR}/shell/${kernel}/.zshenv" ${HOME}
+ln -sfn "${DOTFILES_DIR}/shell/${kernel}/.zshrc" ${HOME}
 
 echo "Finished bootstrapping ${kernel} dotfiles"
