@@ -31,8 +31,8 @@ for file in .config/*; do
 done
 popd
 
-osname=$(uname | tr "[:upper:]" "[:lower:]")
-ln -sfn "${HOME}/.dotfiles/shell/${osname}/.zshenv" ${HOME}
-ln -sfn "${HOME}/.dotfiles/shell/${osname}/.zshrc" ${HOME}
+kernel=$(uname | tr "[:upper:]" "[:lower:]")
+ln -sfn "${HOME}/.dotfiles/shell/${kernel}/.zshenv" ${HOME}
+ln -sfn "${HOME}/.dotfiles/shell/${kernel}/.zshrc" ${HOME}
 
-echo "Finished bootstrapping ${osname} dotfiles"
+echo "Finished bootstrapping ${kernel} dotfiles"
