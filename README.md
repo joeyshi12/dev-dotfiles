@@ -10,14 +10,14 @@ Configuration files for a comfy development environment.
     ```sh
     xcode-select --install
     ```
-2. Install Homebrew, followed by the software list in the Brewfile.
+2. Clone the repository.
+    ```sh
+    git clone https://github.com/joeyshi12/dev-dotfiles.git ~/.dotfiles
+    ```
+3. Install Homebrew, followed by the software list in the Brewfile.
     ```sh
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew bundle --file ~/.dotfiles/Brewfile
-    ```
-3. Clone the repository.
-    ```sh
-    git clone https://github.com/joeyshi12/dev-dotfiles.git ~/.dotfiles
     ```
 4. Create symlinks.
     ```sh
