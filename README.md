@@ -1,6 +1,6 @@
 # dev-dotfiles
 
-Configuration files for a comfy shell environment.
+Configuration files for a comfy development environment.
 
 ## Installation
 
