@@ -7,7 +7,6 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export VISUAL="nvim"
 export EDITOR="${VISUAL}"
 
-export LC_ALL="en_US.UTF-8"
 export IPYTHONDIR="${XDG_CONFIG_HOME}/ipython"
 export JUPYTER_CONFIG_DIR="${XDG_CONFIG_HOME}/jupyter"
 export LESSHISTFILE="${XDG_STATE_HOME}/lesshst"
