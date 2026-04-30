@@ -38,13 +38,5 @@ alias pacsyu="sudo pacman --color=auto -Syu"
 alias pacrsn="sudo pacman --color=auto -Rsn"
 alias pacsc="sudo pacman --color=auto -Sc"
 
-# Runs lf and changes user to current lf directory on quit
-lf() {
-    [ ! -d "${XDG_CACHE_HOME}/lf" ] && mkdir -p "${XDG_CACHE_HOME}/lf"
-    local target="${XDG_CACHE_HOME}/lf/lfdir"
-    /usr/bin/lf -last-dir-path $target
-    cd "$(cat $target)"
-}
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

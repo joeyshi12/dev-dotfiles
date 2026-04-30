@@ -42,8 +42,16 @@ alias dlg='docker logs'
 alias dv='docker volume'
 alias dpu='docker pull'
 
-dsh() {
+function dsh() {
     docker exec -it $1 '/bin/sh'
+}
+
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    command yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd < "$tmp"
+    [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+    rm -f -- "$tmp"
 }
 
 # Tmux

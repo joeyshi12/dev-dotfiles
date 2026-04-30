@@ -1,7 +1,6 @@
 tap "romkatv/powerlevel10k"
-brew "bat"
 brew "fzf"
-brew "lf"
+brew "yazi"
 brew "neovim"
 brew "powerlevel10k"
 brew "ripgrep"

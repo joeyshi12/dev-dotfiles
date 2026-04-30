@@ -37,13 +37,5 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 [[ -f "${HOME}/.dotfiles/shell/aliases.zsh" ]] && \
     source "${HOME}/.dotfiles/shell/aliases.zsh"
 
-# Runs lf and changes user to current lf directory on quit
-lf() {
-    [ ! -d "${XDG_CACHE_HOME}/lf" ] && mkdir -p "${XDG_CACHE_HOME}/lf"
-    local target="${XDG_CACHE_HOME}/lf/lfdir"
-    /opt/homebrew/bin/lf -last-dir-path $target
-    cd "$(cat $target)"
-}
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
